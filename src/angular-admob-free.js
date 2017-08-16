@@ -2,26 +2,26 @@
 
 	angular.module('adMobFree', [])
 
-	.provider('$AdMobFree', [function () 
+	.provider('$adMobFree', [function () 
 	{
 		var events = {
-			'admob.banner.events.LOAD': '$AdMobFree:bannerLoad',
-			'admob.banner.events.LOAD_FAIL': '$AdMobFree:bannerLoadFail',
-			'admob.banner.events.OPEN': '$AdMobFree:bannerOpen',
-			'admob.banner.events.CLOSE': '$AdMobFree:bannerClose',
-			'admob.banner.events.EXIT_APP': '$AdMobFree:bannerExitApp',
-			'admob.interstitial.events.LOAD': '$AdMobFree:interstitialLoad',
-			'admob.interstitial.events.LOAD_FAIL': '$AdMobFree:interstitialLoadFail',
-			'admob.interstitial.events.OPEN': '$AdMobFree:interstitialOpen',
-			'admob.interstitial.events.CLOSE': '$AdMobFree:interstitialClose',
-			'admob.interstitial.events.EXIT_APP': '$AdMobFree:interstitialExitApp',
-			'admob.rewardvideo.events.LOAD': '$AdMobFree:rewardvideoLoad',
-			'admob.rewardvideo.events.LOAD_FAIL': '$AdMobFree:rewardvideoLoadFail',
-			'admob.rewardvideo.events.OPEN': '$AdMobFree:rewardvideoOpen',
-			'admob.rewardvideo.events.CLOSE': '$AdMobFree:rewardvideoClose',
-			'admob.rewardvideo.events.EXIT_APP': '$AdMobFree:rewardvideoExitApp',
-			'admob.rewardvideo.events.START': '$AdMobFree:rewardvideoStart',
-			'admob.rewardvideo.events.REWARD': '$AdMobFree:rewardvideoReward',
+			'admob.banner.events.LOAD': '$adMobFree:bannerLoad',
+			'admob.banner.events.LOAD_FAIL': '$adMobFree:bannerLoadFail',
+			'admob.banner.events.OPEN': '$adMobFree:bannerOpen',
+			'admob.banner.events.CLOSE': '$adMobFree:bannerClose',
+			'admob.banner.events.EXIT_APP': '$adMobFree:bannerExitApp',
+			'admob.interstitial.events.LOAD': '$adMobFree:interstitialLoad',
+			'admob.interstitial.events.LOAD_FAIL': '$adMobFree:interstitialLoadFail',
+			'admob.interstitial.events.OPEN': '$adMobFree:interstitialOpen',
+			'admob.interstitial.events.CLOSE': '$adMobFree:interstitialClose',
+			'admob.interstitial.events.EXIT_APP': '$adMobFree:interstitialExitApp',
+			'admob.rewardvideo.events.LOAD': '$adMobFree:rewardvideoLoad',
+			'admob.rewardvideo.events.LOAD_FAIL': '$adMobFree:rewardvideoLoadFail',
+			'admob.rewardvideo.events.OPEN': '$adMobFree:rewardvideoOpen',
+			'admob.rewardvideo.events.CLOSE': '$adMobFree:rewardvideoClose',
+			'admob.rewardvideo.events.EXIT_APP': '$adMobFree:rewardvideoExitApp',
+			'admob.rewardvideo.events.START': '$adMobFree:rewardvideoStart',
+			'admob.rewardvideo.events.REWARD': '$adMobFree:rewardvideoReward',
 		};
 
 		this.bannerConfig = function(options)
@@ -56,7 +56,6 @@
 			{
 				document.addEventListener(document_event, function() 
 				{
-					console.log('broadcast ', event);
 					$rootScope.$broadcast(event, []);
 				});
 			});
