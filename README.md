@@ -9,7 +9,7 @@ cordova plugin: cordova-plugin-admob-free
 bower install angular-admob-free --save
 ```
 
-##Usage
+## Usage
 ```html
 <script src="lib/angular-admob-free/src/angular-admob-free.js"></script>
 ```
