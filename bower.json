@@ -1,0 +1,26 @@
+{
+  "name": "angular-admob-free",
+  "main": "./src/angular-admob-free.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Junker/angular-admob-free",
+  "authors": [
+    "Dmitry Kosenkov <dk-junker at ya.ru>"
+  ],
+  "description": "AngularJS module for Cordova Admob Free Plugin",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "admob",
+    "admob-free",
+    "cordova"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "example",
+    "test",
+    "tests"
+  ]
+}
