@@ -30,7 +30,7 @@
 			{
 				admob.banner.config(options);
 			});
-		}
+		};
 
 		this.interstitialConfig = function(options)
 		{
@@ -38,7 +38,7 @@
 			{
 				admob.interstitial.config(options);
 			});
-		}
+		};
 
 		this.rewardvideoConfig = function(options)
 		{
@@ -46,7 +46,7 @@
 			{
 				admob.rewardvideo.config(options);
 			});
-		}
+		};
 
 
 
@@ -61,11 +61,22 @@
 			});
 
 			return {
-				banner: typeof admob !== 'undefined' ? admob.banner : undefined,
-				rewardvideo: typeof admob !== 'undefined' ? admob.rewardvideo : undefined,
-				interstitial: typeof admob !== 'undefined' ? admob.interstitial : undefined
+				banner: {
+					prepare: function () {admob.banner.prepare();},
+					show: function () {admob.banner.show();},
+					hide: function () {admob.banner.hide();},
+					remove: function () {admob.banner.remove();},
+				},
+				rewardvideo: {
+					prepare: function () {admob.rewardvideo.prepare();},
+					show: function () {admob.rewardvideo.show();},					
+				},
+				interstitial: {
+					prepare: function () {admob.interstitial.prepare();},
+					show: function () {admob.interstitial.show();},
+				}
 			};
 		}];
-	}])
+	}]);
 
 })();

@@ -29,11 +29,14 @@ angular.module('myapp', ['adMobFree'])
 
 .run($AdMobFree, $rootScope)
 {
-	$adMobFree.banner.prepare();
-	$adMobFree.banner.show();
-  
-	$adMobFree.rewardvideo.prepare();
-	
+	document.addEventListener('deviceready', function() 
+	{
+		$adMobFree.banner.prepare();
+		$adMobFree.banner.show();
+	  
+		$adMobFree.rewardvideo.prepare();
+	});
+
 	$rootScope.$on('$AdMobFree:rewardvideoLoad', function()
 	{
 		$AdMobFree.rewardvideo.show();
